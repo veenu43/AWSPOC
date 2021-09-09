@@ -1,6 +1,7 @@
 package poc.ssm;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
@@ -10,6 +11,7 @@ import software.amazon.awssdk.services.ssm.SsmClient;
 import software.amazon.awssdk.services.ssm.model.GetParameterRequest;
 import software.amazon.awssdk.services.ssm.model.GetParameterResponse;
 
+@Ignore
 public class SystemParameterTest {
     SsmClient ssmClient;
     Region region = Region.AP_SOUTHEAST_1;
@@ -32,7 +34,7 @@ public class SystemParameterTest {
     }
 
     @Test
-    public void createParameter(){
+    public void fetchParameter(){
         GetParameterRequest parameterRequest = GetParameterRequest.builder()
                 .name("Vinit")
                 .build();

@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Random;
 
-//@Ignore
+@Ignore
 public class S3Test {
 
     private S3Client s3;
